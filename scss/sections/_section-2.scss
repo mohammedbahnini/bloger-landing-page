@@ -1,0 +1,66 @@
+.section-2{
+    border-radius: 0 $border-radius 0 ;
+    background: url('../images/bg-pattern-circles.svg') no-repeat -14rem -33rem;
+    background-color: $body-gradient-dark-gray-blue;
+    margin-top: 18rem;
+    @include mq(md){
+        text-align: center;
+    //  background: url('../../images/bg-pattern-circles.svg') no-repeat -14rem -33rem;
+    background: url('../images/bg-pattern-circles.svg')  no-repeat  center -20rem / 160%;
+    background-color: $body-gradient-dark-gray-blue;
+    }
+    .content{
+        display: flex;
+        @include mq(md){
+            flex-direction: column;
+           }
+    }
+    .infrastructure-img , .description{
+        width: 50%;
+        @include mq(md){
+            width: 100%;
+        }
+    }
+    .description{
+        margin: 6.875rem 0;
+        padding-right: 2rem;
+        transform: translateX(8rem);
+        opacity: 0;
+        transition: .5s ease-in;
+        &-title{
+            font-size: 1.8rem;
+            font-weight: 300;
+        }
+        @include mq(md){
+            margin-top: 0rem;
+            padding-right : 0;
+        }
+    }
+    .infrastructure-img{
+        position: relative;
+        transform: translateX(-8rem);
+        opacity: 0;
+        transition: .5s ease-in;
+        margin-top: -50%;
+        img{
+            width: 32rem;
+            position: absolute;
+            top: 50%;
+            //transform: translateY(-47%);
+            @include mq(md){
+                position: relative;
+                top: 0;
+                left : 50%;
+                transform: translateX(-50%);
+                width: 115%;
+            }
+        }
+    }
+
+    &.visible{
+        .infrastructure-img , .description {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}

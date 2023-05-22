@@ -1,0 +1,22 @@
+.description{
+    &:first-of-type{
+        margin-bottom: 4rem;
+    }
+    &-title{
+        color: $very-dark-blue;
+        font-family: 'Overpass', sans-serif;
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+    p{
+        color: rgba($very-dark-grayish-blue , .7);
+    }
+    &.reverse{
+        .description-title{
+            color: $white;
+        }
+        p{
+            color: $grayish-blue;
+        }
+    }
+}

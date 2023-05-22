@@ -1,0 +1,51 @@
+@import 'vars'; 
+@import '../mixins/mixins';
+
+* , *::after , *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    min-height: 100vh;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+.wrapper{
+    max-width: 1110px;
+    margin: 0 auto;
+    @include mq(md){
+        width: 100%;
+        padding: 0 1.3rem;
+    }
+}
+ul ,ol {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+p{
+    line-height: 1.6em;
+}
+img{
+    display: block;
+}
+
+.btn{
+    background-color: $white;
+    color: $light-red;
+    padding: 1em 2.3em;
+    border-radius: 10rem;
+    color: $light-red;
+    &.outlined{
+        background-color: transparent;
+        border: 1px solid $white;
+    }
+    @include mq(md){
+        padding: .7em .8em;
+    }
+}
